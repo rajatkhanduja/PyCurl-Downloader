@@ -26,3 +26,12 @@ To use, simply open a terminal and execute the command as follows
 	eg :-
 		
 	pycurl-download http://<remote-file-address> ~/Desktop/<file-name>
+
+
+------------------------------------------------------------------------------------------
+TODO -list 
+____________________________________________________
+
+1. Create a GUI
+2. Make it portable to Windows based systems 
+3. For terminal usage, create visualisation of the percentage downloaded/left , expected time remaining, download speed, etc.
