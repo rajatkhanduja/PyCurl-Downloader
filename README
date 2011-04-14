@@ -17,6 +17,8 @@ This completes the installation
 -----------------------------------------------------------------------------------------
 USAGE GUIDELINES
 -----------------------------------------------------------------------------------------
+Set the proxy variables. 
+export http_proxy="http://<username>[:password]@<proxy-server>[:<proxy-port>]
 To use, simply open a terminal and execute the command as follows 
 	
 	pycurl-download <target-address> <output-file>
@@ -24,3 +26,12 @@ To use, simply open a terminal and execute the command as follows
 	eg :-
 		
 	pycurl-download http://<remote-file-address> ~/Desktop/<file-name>
+
+
+------------------------------------------------------------------------------------------
+TODO -list 
+____________________________________________________
+
+1. Create a GUI
+2. Make it portable to Windows based systems 
+3. For terminal usage, create visualisation of the percentage downloaded/left , expected time remaining, download speed, etc.
