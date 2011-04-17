@@ -3,7 +3,7 @@
 # This file describes the downloader class
 #
 #
-# “Copyright 2011 Rajat Khanduja”
+# "Copyright 2011 Rajat Khanduja"
 #
 # This file is part of Pycurl-Downloader.
 #
@@ -66,16 +66,18 @@ class downloader:
 
 	def download(self):
 
-
-		print "Starting download. Total size: "+str(self.size)+" bytes or "+str(self.size/1024/1024)+" MB"
-
+		if (self.size>0):
+			print "Starting download. Total size: "+str(self.size)+" bytes or "+str(self.size/1024/1024)+" MB"
+		else:
+			print "Starting download"
 		# Download straight-away if the size is less than the limit
 
-		if self.size <=self.chunk:
+		if self.size <=self.chunk or self.size<0:
 		# Set the output file
 			self.curl_obj.fp = open(self.output_file, "wb")
 			self.curl_obj.setopt(pycurl.WRITEDATA, self.curl_obj.fp)
 			self.curl_obj.perform()
+			self.delete_temp()
 			sys.exit()
 
 

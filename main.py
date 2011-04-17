@@ -13,7 +13,7 @@
 # (either from the next parameter or from environment variable)
 #
 #
-# “Copyright 2011 Rajat Khanduja”	
+# "Copyright 2011 Rajat Khanduja"
 #
 #
 # This file is part of Pycurl-Downloader.
