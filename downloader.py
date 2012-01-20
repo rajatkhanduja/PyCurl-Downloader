@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python
 # Author : Rajat Khanduja
 # This file describes the downloader class
 #
@@ -63,6 +63,11 @@ class downloader:
 
 
 		#######################################################
+
+		######## Set the progress function #############
+#		self.curl_obj.setopt(self.curl_obj.NOPROGRESS,1)
+#		self.curl_obj.setopt(self.curl_obj.PROGRESSFUNCTION,self.progress)
+
 
 	def download(self):
 
@@ -249,20 +254,10 @@ class downloader:
 
 		os.rmdir(self.dir_name)
 
-	def print_percentage(self,i):
-		# Function to display the percentage of download using '-','.' and '|'
-		# '|' implies 25%, '=' implies 5% and '+' implies 10% mark
 
-		percentage= (i/(self.size/1024/1024) * 100)
-
-		#print percentage
-
-		if percentage%25 >= 0 and percentage%25 <= 1:
-			sys.stdout.write("|")
-			return
-		if percentage%10 >= 0 and percentage%10 <= 1:
-			sys.stdout.write("=")
-			return
-
-		#sys.stdout.write('.')
-
+	def progress(self,download_total,downloaded,uploaded_total,upload):
+		'''
+		Function to display the progress
+		'''
+		print "To be downloaded" + str(download_total)
+		print "Downloaded : " + str(downloaded)
