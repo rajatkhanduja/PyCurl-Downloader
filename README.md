@@ -1,7 +1,6 @@
 Pycurl-Download is a program that uses the python binding of the Curl library to make it easier and faster to download massive files. 
 It is especially useful for those behind proxy who are restricted by the servers to download huge files. This can overcome that hurdle and download massive files, the only restricting parameter being the 'server' on which the file is kept. Based on certain settings, which could be unfavourable for Pycurl-Download, such downloads might fail and yeild erroneous files. This has to be fixed.
 
------------------------------------------------------------------------------------------
 INSTALLATION GUIDELINES
 -----------------------------------------------------------------------------------------
 
@@ -14,11 +13,10 @@ INSTALLATION GUIDELINES
    The setup asks for the version of python in use; fill in the corresponding version number (like 2.6 or 3.1)
 This completes the installation
 
------------------------------------------------------------------------------------------
 USAGE GUIDELINES
 -----------------------------------------------------------------------------------------
 Set the proxy variables. 
-export http_proxy="http://<username>[:password]@<proxy-server>[:<proxy-port>]
+export http\_proxy="http://<username>[:password]@<proxy-server>[:<proxy-port>]
 To use, simply open a terminal and execute the command as follows 
 	
 	pycurl-download <target-address> <output-file>
@@ -28,9 +26,8 @@ To use, simply open a terminal and execute the command as follows
 	pycurl-download http://<remote-file-address> ~/Desktop/<file-name>
 
 
-------------------------------------------------------------------------------------------
 TODO -list 
-____________________________________________________
+--------------
 
 1. Create a GUI
 2. Make it portable to Windows based systems 
