@@ -10,7 +10,6 @@ INSTALLATION GUIDELINES
 3. Run the setup with sudo privileges.
 	sudo ./setup.sh
 
-   The setup asks for the version of python in use; fill in the corresponding version number (like 2.6 or 3.1)
 This completes the installation
 
 USAGE GUIDELINES
