@@ -29,6 +29,8 @@ To use, simply open a terminal and execute the command as follows
 TODO -list 
 --------------
 
-1. Create a GUI
-2. Make it portable to Windows based systems 
-3. For terminal usage, create visualisation of the percentage downloaded/left , expected time remaining, download speed, etc.
+* Remove the need to provide filename. 
+* Recursive downloads.
+* Create a GUI.
+* For terminal usage, create visualisation of the percentage downloaded/left , expected time remaining, download speed, etc.
+* Make it portable to Windows based systems. 
