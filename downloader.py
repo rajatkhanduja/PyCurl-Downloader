@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 # Author : Rajat Khanduja
 # This file describes the downloader class
 #
@@ -56,7 +56,13 @@ class downloader:
 		tmp_curl_obj.setopt(tmp_curl_obj.NOBODY,True)
 		#self.curl_obj.setopt(self.curl_obj.USERAGENT,"Mozilla/5.0 (compatible; pycurl)")
 		# Send request
-		tmp_curl_obj.perform()
+		try:
+			tmp_curl_obj.perform()
+		except e:
+			print e
+			self.delete_temp()
+			sys.exit (2)
+
 
 		# get the size
 		self.size=tmp_curl_obj.getinfo(tmp_curl_obj.CONTENT_LENGTH_DOWNLOAD)

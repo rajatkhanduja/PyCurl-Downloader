@@ -1,8 +1,4 @@
-echo "Please enter the version of Python installed on your computer"
-echo "Eg : 2.6 , 2.7 , 3.0"
-echo "To view the version, open python interpreter in a terminal. The first few lines contain the relevant information"
-
-read python_version
+python_version=2.7
 
 # Install pycurl
 sudo apt-get install python-pycurl

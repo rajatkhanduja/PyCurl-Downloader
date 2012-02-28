@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 # Author : Rajat Khanduja
 # Program to make use of the downloader class (based on pycurl) and
 # download
