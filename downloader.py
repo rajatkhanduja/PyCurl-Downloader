@@ -57,18 +57,15 @@ class downloader:
 		#self.curl_obj.setopt(self.curl_obj.USERAGENT,"Mozilla/5.0 (compatible; pycurl)")
 		# Send request
 		try:
+			print "Trying to get size of the file"
 			tmp_curl_obj.perform()
-		except e:
+			# get the size
+			self.size = tmp_curl_obj.getinfo(tmp_curl_obj.CONTENT_LENGTH_DOWNLOAD)
+		except Exception, e:
 			print e
 			self.delete_temp()
-			sys.exit (2)
-
-
-		# get the size
-		self.size=tmp_curl_obj.getinfo(tmp_curl_obj.CONTENT_LENGTH_DOWNLOAD)
-
-
-		#######################################################
+			self.size = 0
+			#sys.exit (2)
 
 		######## Set the progress function #############
 #		self.curl_obj.setopt(self.curl_obj.NOPROGRESS,1)
@@ -258,7 +255,10 @@ class downloader:
 				break
 			i=i+1
 
-		os.rmdir(self.dir_name)
+		try:
+			os.rmdir(self.dir_name)
+		except Exception, e:
+			pass
 
 
 	def progress(self,download_total,downloaded,uploaded_total,upload):
