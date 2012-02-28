@@ -16,7 +16,8 @@ This completes the installation
 USAGE GUIDELINES
 -----------------------------------------------------------------------------------------
 Set the proxy variables. 
-export http\_proxy="http://<username>[:password]@<proxy-server>[:<proxy-port>]
+export http\_proxy="http://\<username\>[:password]@\<proxy-server\>[:\<proxy-port\>]
+
 To use, simply open a terminal and execute the command as follows 
 	
 	pycurl-download <target-address> <output-file>
