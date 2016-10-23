@@ -41,6 +41,7 @@ class downloader:
 
 		self.curl_obj=pycurl.Curl()		# Initializing CURL object
 		self.curl_obj.setopt(self.curl_obj.URL,target_address)	# Setting the target
+		self.curl_obj.setopt(pycurl.FOLLOWLOCATION, 1)
 		if proxy != None:
 			self.curl_obj.setopt(pycurl.PROXY,proxy)	# This should be set as "http://<username>[:<password>]@<proxy-host>[:<proxy-port>]"
 
@@ -54,6 +55,7 @@ class downloader:
 			self.curl_obj.setopt(pycurl.PROXY,proxy)	# This should be set as "http://<username>[:<password>]@<proxy-host>[:<proxy-port>]"
 		# Set NO-body download to true
 		tmp_curl_obj.setopt(tmp_curl_obj.NOBODY,True)
+		tmp_curl_obj.setopt(pycurl.FOLLOWLOCATION, 1)
 		#self.curl_obj.setopt(self.curl_obj.USERAGENT,"Mozilla/5.0 (compatible; pycurl)")
 		# Send request
 		try:
